@@ -89,7 +89,6 @@ class ViewController: UIViewController {
         let randomB = Float.random(in: 0.0...1.0)
         let randomA = Float.random(in: 0.0...1.0)
         let alphaSwitch = randomForAlphaSwitch.isOn
-        var numAlpha = bodyView.backgroundColor?.cgColor.alpha
         
         if inNoutSegment.selectedSegmentIndex == 0 {
             bodyR = randomR
@@ -98,21 +97,17 @@ class ViewController: UIViewController {
             //設定 body 的 Background Color
             if alphaSwitch {
                 bodyA = randomA
-                numAlpha = CGFloat(bodyA)
             }
-            bodyView.backgroundColor = UIColor(red: CGFloat(bodyR), green: CGFloat(bodyG), blue: CGFloat(bodyB), alpha: CGFloat(numAlpha!))
-            
+            bodyView.backgroundColor = UIColor(red: CGFloat(bodyR), green: CGFloat(bodyG), blue: CGFloat(bodyB), alpha: CGFloat(bodyA))
         } else {
             outsideR = randomR
             outsideG = randomG
             outsideB = randomB
             //設定 outside 的 Background Color
-            numAlpha = outsideView.backgroundColor?.cgColor.alpha
             if alphaSwitch {
                 outsideA = randomA
-                numAlpha = CGFloat(outsideA)
             }
-            outsideView.backgroundColor = UIColor(red: CGFloat(outsideR), green: CGFloat(outsideG), blue: CGFloat(outsideB), alpha: CGFloat(numAlpha!))
+            outsideView.backgroundColor = UIColor(red: CGFloat(outsideR), green: CGFloat(outsideG), blue: CGFloat(outsideB), alpha: CGFloat(outsideA))
         }
         //設定Slider
         redSlider.setValue(randomR, animated: true)
