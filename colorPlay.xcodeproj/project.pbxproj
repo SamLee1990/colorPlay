@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0479C2D724CAB620006500AC /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479C2D624CAB620006500AC /* GradientViewController.swift */; };
+		0479C2D924CC1C5E006500AC /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479C2D824CC1C5E006500AC /* AnimationViewController.swift */; };
+		0479C2DD24CC33D9006500AC /* MagicParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0479C2DC24CC33D9006500AC /* MagicParticle.sks */; };
 		049A0EF824C71D27001D6313 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A0EF724C71D27001D6313 /* AppDelegate.swift */; };
 		049A0EFA24C71D27001D6313 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A0EF924C71D27001D6313 /* SceneDelegate.swift */; };
 		049A0EFC24C71D27001D6313 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A0EFB24C71D27001D6313 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0479C2D624CAB620006500AC /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		0479C2D824CC1C5E006500AC /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		0479C2DC24CC33D9006500AC /* MagicParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MagicParticle.sks; sourceTree = "<group>"; };
 		049A0EF424C71D27001D6313 /* colorPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049A0EF724C71D27001D6313 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049A0EF924C71D27001D6313 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,8 +64,11 @@
 			children = (
 				049A0EF724C71D27001D6313 /* AppDelegate.swift */,
 				049A0EF924C71D27001D6313 /* SceneDelegate.swift */,
-				049A0EFB24C71D27001D6313 /* ViewController.swift */,
 				049A0EFD24C71D27001D6313 /* Main.storyboard */,
+				0479C2DC24CC33D9006500AC /* MagicParticle.sks */,
+				049A0EFB24C71D27001D6313 /* ViewController.swift */,
+				0479C2D624CAB620006500AC /* GradientViewController.swift */,
+				0479C2D824CC1C5E006500AC /* AnimationViewController.swift */,
 				049A0F0024C71D29001D6313 /* Assets.xcassets */,
 				049A0F0224C71D29001D6313 /* LaunchScreen.storyboard */,
 				049A0F0524C71D29001D6313 /* Info.plist */,
@@ -126,6 +135,7 @@
 			files = (
 				049A0F0424C71D29001D6313 /* LaunchScreen.storyboard in Resources */,
 				049A0F0124C71D29001D6313 /* Assets.xcassets in Resources */,
+				0479C2DD24CC33D9006500AC /* MagicParticle.sks in Resources */,
 				049A0EFF24C71D27001D6313 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0479C2D724CAB620006500AC /* GradientViewController.swift in Sources */,
 				049A0EFC24C71D27001D6313 /* ViewController.swift in Sources */,
+				0479C2D924CC1C5E006500AC /* AnimationViewController.swift in Sources */,
 				049A0EF824C71D27001D6313 /* AppDelegate.swift in Sources */,
 				049A0EFA24C71D27001D6313 /* SceneDelegate.swift in Sources */,
 			);

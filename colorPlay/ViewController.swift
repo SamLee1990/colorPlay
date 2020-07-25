@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var blueLabel: UILabel!
     @IBOutlet weak var alphaLabel: UILabel!
     @IBOutlet weak var randomForAlphaSwitch: UISwitch!
+    @IBOutlet weak var gradientButton: UIButton!
     
     var bodyR:Float = 60/255
     var bodyG:Float = 78/255
@@ -36,28 +37,32 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        //球體圖案產生
         var image = UIImage(named: "body")
         let bodyImageView = UIImageView(image: image)
         bodyImageView.frame = bodyView.bounds
         bodyImageView.contentMode = .scaleAspectFill
         bodyView.mask = bodyImageView
         bodyView.backgroundColor = UIColor(red: 60/255, green: 78/255, blue: 87/255, alpha: 1)
-//        bodyView.backgroundColor = UIColor(red: 255/255, green: 78/255, blue: 0/255, alpha: 1)
-        
+        //氣體圖案產生
         image = UIImage(named: "outside")
         let outsideImageView = UIImageView(image: image)
         outsideImageView.frame = outsideView.bounds
         outsideImageView.contentMode = .scaleAspectFill
         outsideView.mask = outsideImageView
         outsideView.backgroundColor = UIColor(red: 112/255, green: 78/255, blue: 165/255, alpha: 1)
-//        outsideView.backgroundColor = UIColor(red: 0/255, green: 78/255, blue: 255/255, alpha: 1)
-        
+        //Ｓlider預設值
         redSlider.value = 60 / 255
         greenSlider.value = 78 / 255
         blueSlider.value = 87 / 255
         alphaSlider.value = 1
+        //按鈕背景漸層效果
+        let buttonGradientLayer = CAGradientLayer()
+        buttonGradientLayer.frame = gradientButton.bounds
+        buttonGradientLayer.colors = [UIColor(red: 112/255, green: 78/255, blue: 165/255, alpha: 1).cgColor, UIColor(red: 60/255, green: 78/255, blue: 87/255, alpha: 1).cgColor]
+        buttonGradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        buttonGradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+        gradientButton.layer.insertSublayer(buttonGradientLayer, at: 0)
     }
     
     @IBAction func colorSliderChanged(_ sender: UISlider) {
@@ -79,7 +84,6 @@ class ViewController: UIViewController {
         greenLabel.text = String(format: "%.0f", greenSlider.value * 255)
         blueLabel.text = String(format: "%.0f", blueSlider.value * 255)
         alphaLabel.text = String(format: "%.0f", alphaSlider.value * 100) + "%"
-        
     }
     
     @IBAction func randomRGBA(_ sender: UIButton) {
